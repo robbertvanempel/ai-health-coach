@@ -1,0 +1,20 @@
+{
+  "schemaVersion": "0.1.0",
+  "name": "AI Health Coach - YouTube",
+  "behavior": "create",
+  "noteNameFormat": "{{date|date:\"YYYY-MM-DD\"}} - {{schema:name|safe_name}}",
+  "path": "knowledge/inbox",
+  "noteContentFormat": "# {{schema:name}}\n\n> Captured source material. Claims are not verified medical advice.\n\n![{{schema:name}}]({{url}})\n\n## Description\n\n{{description}}\n\n## Captured content or transcript\n\n{{content}}",
+  "properties": [
+    {"name": "title", "value": "{{schema:name}}", "type": "text"},
+    {"name": "source", "value": "{{url}}", "type": "text"},
+    {"name": "author", "value": "{{schema:author}}", "type": "text"},
+    {"name": "published", "value": "{{schema:uploadDate|date:\"YYYY-MM-DD\"}}", "type": "date"},
+    {"name": "clipped", "value": "{{date|date:\"YYYY-MM-DD\"}}", "type": "date"},
+    {"name": "content_type", "value": "video", "type": "text"},
+    {"name": "transcript_status", "value": "unverified", "type": "text"},
+    {"name": "status", "value": "inbox", "type": "text"},
+    {"name": "tags", "value": "health-source, video, webclip", "type": "multitext"}
+  ],
+  "triggers": ["https://www.youtube.com/watch?v=", "https://youtu.be/"]
+}

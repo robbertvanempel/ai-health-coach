@@ -1,0 +1,15 @@
+# Health and journal data are private by default.
+/onboarding/
+/profile/
+/goals/
+/journal/
+/data/
+/knowledge/
+/plans/
+/reviews/
+/audit/
+
+# Local application state.
+.DS_Store
+.obsidian/workspace*.json
+.trash/

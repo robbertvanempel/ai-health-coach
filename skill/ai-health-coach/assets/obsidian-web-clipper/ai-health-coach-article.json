@@ -1,0 +1,20 @@
+{
+  "schemaVersion": "0.1.0",
+  "name": "AI Health Coach - Article",
+  "behavior": "create",
+  "noteNameFormat": "{{date|date:\"YYYY-MM-DD\"}} - {{title|safe_name}}",
+  "path": "knowledge/inbox",
+  "noteContentFormat": "# {{title}}\n\n> Captured source material. Claims are not verified medical advice.\n\n## Description\n\n{{description}}\n\n## Captured content\n\n{{content}}",
+  "properties": [
+    {"name": "title", "value": "{{title}}", "type": "text"},
+    {"name": "source", "value": "{{url}}", "type": "text"},
+    {"name": "author", "value": "{{author}}", "type": "text"},
+    {"name": "site", "value": "{{site}}", "type": "text"},
+    {"name": "published", "value": "{{published|date:\"YYYY-MM-DD\"}}", "type": "date"},
+    {"name": "clipped", "value": "{{date|date:\"YYYY-MM-DD\"}}", "type": "date"},
+    {"name": "content_type", "value": "article", "type": "text"},
+    {"name": "status", "value": "inbox", "type": "text"},
+    {"name": "tags", "value": "health-source, webclip", "type": "multitext"}
+  ],
+  "triggers": ["schema:@Article", "schema:@NewsArticle", "schema:@BlogPosting"]
+}

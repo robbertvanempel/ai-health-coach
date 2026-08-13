@@ -1,0 +1,4 @@
+interface:
+  display_name: "AI Health Coach"
+  short_description: "Private health journaling and coaching"
+  default_prompt: "Use $ai-health-coach to start my private health-coaching intake."
