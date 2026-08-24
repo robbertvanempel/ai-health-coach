@@ -97,6 +97,19 @@ class WorkspaceTests(unittest.TestCase):
 
 
 class DistributionTests(unittest.TestCase):
+    def test_claude_plugin_and_marketplace_metadata(self):
+        plugin = json.loads(
+            (REPO / ".claude-plugin" / "plugin.json").read_text(encoding="utf-8")
+        )
+        marketplace = json.loads(
+            (REPO / ".claude-plugin" / "marketplace.json").read_text(encoding="utf-8")
+        )
+        self.assertEqual(plugin["name"], "ai-health-coach")
+        self.assertEqual(plugin["skills"], ["./skill/ai-health-coach"])
+        self.assertEqual(marketplace["name"], "ai-health-coach")
+        self.assertEqual(marketplace["plugins"][0]["name"], "ai-health-coach")
+        self.assertEqual(marketplace["plugins"][0]["source"], "./")
+
     def test_package_contains_skill_at_single_root(self):
         with tempfile.TemporaryDirectory() as temp:
             output = Path(temp) / "ai-health-coach.zip"

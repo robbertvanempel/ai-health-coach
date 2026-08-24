@@ -1,0 +1,31 @@
+{
+  "name": "ai-health-coach",
+  "owner": {
+    "name": "Robbert van Empel"
+  },
+  "metadata": {
+    "description": "Official AI Health Coach plugin marketplace"
+  },
+  "plugins": [
+    {
+      "name": "ai-health-coach",
+      "source": "./",
+      "description": "Privacy-first health, fitness, nutrition, recovery, wearable-data, and longitudinal journaling skill.",
+      "version": "0.1.0",
+      "author": {
+        "name": "Robbert van Empel"
+      },
+      "homepage": "https://thefuture.im/guide/ai-health-coach",
+      "repository": "https://github.com/robbertvanempel/ai-health-coach",
+      "license": "MIT",
+      "keywords": [
+        "health",
+        "fitness",
+        "nutrition",
+        "recovery",
+        "wearables",
+        "journaling"
+      ]
+    }
+  ]
+}

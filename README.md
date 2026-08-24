@@ -83,6 +83,23 @@ cp -R skill/ai-health-coach ~/.agents/skills/ai-health-coach
 
 Restart the host if the skill does not appear. This command is an installation instruction for users; the repository does not run it automatically.
 
+#### Claude Code
+
+The repository is also a Claude Code plugin marketplace. Add the marketplace and install the plugin:
+
+```bash
+claude plugin marketplace add robbertvanempel/ai-health-coach
+claude plugin install ai-health-coach@ai-health-coach
+```
+
+Run `/reload-plugins` in an existing Claude Code session, or start a new session. Then invoke the installed skill with:
+
+```text
+/ai-health-coach:ai-health-coach Start my onboarding.
+```
+
+Claude Code installs marketplace plugins in its managed cache. Keep the private `ai-health-coach-data` workspace outside that cache and outside the cloned public repository.
+
 #### Claude Cowork
 
 1. Download `ai-health-coach.zip` from the latest GitHub release.
